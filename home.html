@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Nextugame</title>
+		
+		<link rel="icon" href="">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+		
+        <meta property="og:title" content="Nextugame">
+		<meta property="og:description" content="Unfinished">
+        <meta property="og:type" content="website">
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+		<h1 id="welcomeText"></h1>
+		<a href="editor">Click me to go to editor</a>
+		<button onclick="deleteNameCookie()">Click me to delete name cookie</button>
+	</body>
+	
+	<script src="JS/cookieManager.js"></script>
+	
+	<script>
+		function deleteNameCookie()
+		{
+			deleteCookie("name");
+		}
+	
+		if (!cookieExists("name"))
+		{
+			var newName = prompt("Enter your name", "");
+		
+			createCookie("name", newName);
+		}
+		
+		document.getElementById("welcomeText").innerHTML = "Welcome " + getCookie("name") + "!";
+	</script>
+</html>
