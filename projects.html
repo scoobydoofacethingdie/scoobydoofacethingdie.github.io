@@ -10,10 +10,15 @@
 		<meta charset="utf-8">
 		
 		<link rel="stylesheet" href="style.css">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	</head>
 	
 	<body>
 		<h1>My projects:</h1>
+		<h5>You can click on the title of the project to try it out!</h5>
 		
 		<div id="projects"></div>
 	</body>
@@ -22,21 +27,21 @@
 		function newProject(name, thumbnail, link)
 		{
 			var newBox = document.createElement("div");
-			newBox.style.width = "400px";
-			newBox.style.height = "300px";
+			newBox.style.width = "150px";
+			newBox.style.height = "150px";
 			newBox.style.marginTop = "55px";
 			
 			var projectThumbnail = document.createElement("img");
 			projectThumbnail.src = thumbnail;
-			projectThumbnail.style.width = "400px";
-			projectThumbnail.style.height = "290px";
+			projectThumbnail.style.width = "150px";
+			projectThumbnail.style.height = "140px";
 			newBox.appendChild(projectThumbnail);
 			
 			var projectName = document.createElement("a");
 			projectName.text = name;
 			projectName.href = link;
-			projectName.style.height = "10px";
-			projectName.style.fontSize = "25px";
+			projectName.style.height = "150px";
+			projectName.style.fontSize = "20px";
 			newBox.appendChild(projectName);
 
 			document.getElementById("projects").appendChild(newBox);  
