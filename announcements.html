@@ -17,13 +17,20 @@
 	</head>
 	
 	<body>
+		<button onclick="goBack()">Back</button>
+		
 		<h1>announcements:</h1>
-		<h5>you can click on the title of the announcement to try it! (some announcements doesnt have a link)</h5>
+		<h5>you can click on the title of the announcement to see it! (some announcements doesnt have a link)</h5>
 	
 		<div id="announcements"></div>
 	</body>
 	
 	<script>
+		function goBack()
+		{
+			window.location.replace("https://scoobydoofacethingdie.github.io/");	
+		}
+		
 		function newAnnouncement(text, description, thumbnail, link)
 		{
 			var newBox = document.createElement("div");
@@ -31,8 +38,10 @@
 			
 			var announcementText = document.createElement("a");
 			announcementText.text = text;
+			
 			if (link != null)
 				announcementText.href = link;
+			
 			announcementText.style.height = "150px";
 			announcementText.style.fontSize = "40px";
 			newBox.appendChild(announcementText);
@@ -44,10 +53,11 @@
 			{
 				var announcementThumbnail = document.createElement("img");
 				announcementThumbnail.src = thumbnail;
+				
 				newBox.appendChild(announcementThumbnail);
 			}
 			
-			for (const text of description.split("\n"))
+			for (var text of description.split("\n"))
 			{
 				var nextLine2 = document.createElement("br");
 				newBox.appendChild(nextLine2);
@@ -55,13 +65,15 @@
 				var announcementDescription = document.createElement("a");
 				announcementDescription.text = text;
 				announcementDescription.style.fontSize = "20px";
+				
 				newBox.appendChild(announcementDescription);
 			}
 
 			document.getElementById("announcements").appendChild(newBox);  
 		}
 		
-		newAnnouncement("testing website!", "so a few months ago i made a website\nfor testing stuff and decided to show\nit! more will come in that and this website soon.", "https://scoobydoofacethingdie.github.io/logo.png");
-		newAnnouncement("announcements got added!", "just added announcements\nand you're reading the first announcement!", "https://cdn.discordapp.com/attachments/811599067171258398/864423215689367562/d6j80h1-fe11bccd-7b26-4508-a469-13fd2292643c.jpg", "https://scoobydoofacethingdie.github.io/announcements.html");
+		newAnnouncement("back buttons", "exactly what you think it is", "https://scoobydoofacethingdie.github.io/logo.png");
+		newAnnouncement("testing website!", "so a few months ago i made a website\nfor testing stuff and decided to show\nit! more will come in that and this website soon.", "https://scoobydoofacethingdie.github.io/logo.png", "https://www.scoobydoofacethingdie.tk/");
+		newAnnouncement("announcements got added!", "just added announcements\nand you're reading the first announcement!", "https://cdn.discordapp.com/attachments/811599067171258398/864423215689367562/d6j80h1-fe11bccd-7b26-4508-a469-13fd2292643c.jpg");
 	</script>
 </html>
