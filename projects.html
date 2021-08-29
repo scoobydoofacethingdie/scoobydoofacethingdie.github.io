@@ -17,6 +17,8 @@
 	</head>
 	
 	<body>
+		<button onclick="goBack()">Back</button>
+		
 		<h1>my projects:</h1>
 		<h5>you can click on the title of the project to try it out!</h5>
 		
@@ -24,6 +26,11 @@
 	</body>
 	
 	<script>
+		function goBack()
+		{
+			window.location.replace("https://scoobydoofacethingdie.github.io/");	
+		}
+		
 		function newProject(name, thumbnail, link)
 		{
 			var newBox = document.createElement("div");
