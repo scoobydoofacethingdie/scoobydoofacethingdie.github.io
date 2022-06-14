@@ -1,4 +1,4 @@
-* {
+body {
 	background-color: #0d0d0d;
 	color: #ffffff;
 }
@@ -18,4 +18,25 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.project {
+	border-radius: 5px;
+	background-color: #171717;
+	cursor: pointer;
+}
+
+.projectName {
+	color: white;
+	font-size: 30px;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.projectDescription {
+	color: white;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
