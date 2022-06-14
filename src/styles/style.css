@@ -11,15 +11,6 @@ body {
 	transform: translate(50%, -50%);
 }
 
-a {
-	color: rgb(75, 75, 255);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
 .project {
 	border-radius: 5px;
 	background-color: #171717;
